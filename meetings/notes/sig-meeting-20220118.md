@@ -2,7 +2,13 @@
 
 ## Attendees
 
-[Agenda](https://github.com/o3de/tsc/issues/9)
+ROB - Royal O' Brien
+JO - Jeremy Ong
+KB - Karl Berg
+NL - Nick Lawson
+TAF - Tobias Alexander Frank
+
+## [Agenda](https://github.com/o3de/tsc/issues/9)
 
 ## [Splitting Sigs](https://github.com/o3de/tsc/issues/9#issuecomment-1015517476)
 
