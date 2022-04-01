@@ -12,6 +12,7 @@ Yuyi (sig-ui-ux)
 Gavin monroe (sig-content)
 Sean Sweeney (sig-testing)
 Karl Berg (tsc)
+Nicholas Lawson (tsc)
 Jeremy Ong (tsc)
 Royal O'Brien (tsc)
 
