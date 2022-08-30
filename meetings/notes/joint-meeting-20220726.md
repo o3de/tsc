@@ -1,4 +1,4 @@
-# Joint TSC : SIG Meeting 2022-04-26
+# Joint TSC : SIG Meeting 2022-07-26
 
 ## TSC Attendees
 
@@ -12,7 +12,7 @@
 ## SIG Chairs/Co-Chairs, Marketing Attendees
 
 - byrcolin
-- geds-gm
+- geds-dm
 - Joshua Rainbolt
 - Yuyi Hsu
 - Mike Chang

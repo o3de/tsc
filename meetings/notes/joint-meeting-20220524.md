@@ -1,4 +1,4 @@
-# Joint TSC : SIG Meeting 2022-04-26
+# Joint TSC : SIG Meeting 2022-05-24
 
 ## Attendees
 
