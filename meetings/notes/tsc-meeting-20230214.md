@@ -1,6 +1,6 @@
-# TSC Meeting - 2/7/2023
+# TSC Meeting - 2/21/2023
 
-## OPEN DISCUSSION
+## UX SIG delivers their report
 
 # Chair and Co-Chair
 * nick_l[amazon] 
@@ -11,81 +11,88 @@
 * Tobias Alexander Franke [Huawei]
 * geds-dm [Amazon]
 * RoddieKieley [Red Hat]
-* kberg [Amazon]
-* Danillo [Amazon]
-* byrcolin [Amazon]
+* Bhanuja [Amazon]
+* Seapip [Amazon]
+* Yuyi [Amazon]
+* Joshua Rainbolt [Amazon]
+* Royal OBrein [LF]
 * JT [SCB_GameDesign]
+* colinb [APMG]
+* kberg [Amazon]
 
 ## Agenda Items
-* No official agenda items - office hours! 
-https://github.com/o3de/tsc/issues/67
+* https://github.com/o3de/tsc/issues/68 
+The UX team would like to review the year-end 2022 RTE survey results with the group and then discuss next steps.
+https://docs.google.com/document/d/1A8nm1tHmbPLN4F6Wu0WtHv-YxgrLwIoxxwNkhT6b3O4/edit
 
-###  Topic:  Tobias:  Huawei will create a project board
-* Just like Amazon, Huawei will add a project board and roadmap for planned contribution.
-* There are a bunch of contributions lined up!
 
-### Topic:  Tobias:  You can actually assign anyone to a ticket, if they comment on it.
-* If someone comments on a ticket, they can then be assigned a ticket, thats all that needs to happen for it to work!
+###  Topic:  Royal updates
+* A better bot that allows better recordings.  the recordings will be able to transcribe them to text
+  to review them.
+* A bot that can show each day's discussion as an email digest
+* Documentation: Collaborative - hedge doc that allows people to collaborate in markdown.  if its useful I can put that up.
+* Other elements being worked on like being able to make a tag in discord which creates a discussion in groups or in github.
 
-### Topic:  geds-dm: Sig-core is nominating
-* Election will happen final week of February
-* NickL encourages non-amazon participation, especially from Huawei, Tobias will see if folks are available!
+###  Yuyi - Topic:  The UX team reviews the year-end 2022 RTE survey results
+(NOTE from Nick,  this was a guided walk through of the document at the following URL.  These notes are largely redundant vs the content in the document below.  For brevity of notes here, I'll try to capture the things that were mentioned or discussed but NOT on the below doc.  Unless otherwise specified, comments are by Yuyi.)
+* https://docs.google.com/document/d/1A8nm1tHmbPLN4F6Wu0WtHv-YxgrLwIoxxwNkhT6b3O4/edit
+* Contains a REV-THE-ENGINE Results document
+* Review the result from the REV-THE-ENGINE results document
+* As SIG-UI/UX we can suggest and help drive improvement but lack the ability to implement them across the engine.
+* (Doc is reviewed linearly here, section by section)
+* Average score is average but able to be improved.
+* Blue lines is June result, Red is December result.
+* packaging and deployment needs improvement and has lower scores
+* Just going thru this quickly because you can go thru the report yourself. We will also be posting it on the blog.
+* In addition to the above questions, Rate your Agreement to the following Aspects of O3DE
+  * Results for Ease of Resolving Issues is really low!  Error messages are not helpful.  content helping the customer is not well connected with use cases.
+  * We want to call this out for the team to consider.
+* O3DE is below the software industry benchmark
+* At the end of the survey we asked open ended questions to provide feedback  We have collected the feedback to present here.
+* (Joshua Rainbolt) NPS score is evaluated against other types of industries as well.  This is a particular one, (software), but I think its good to note that this MPS score evaluates against all software out there, ie, Word, etc, is a benchmark of "happy factor" for NPS score.
+* NPS stands for Net Promoter Score.  it is an industry standard with one question ("How likely are you to recommend this product to friends and colleagues?").  Behind this question is a very well calculated formula to figure out how likely the user is going to use this service and be an advocate.  There is an industry standard to define where is the bar.  Theres a 0 to 10 you can choose how likely to recommend the software to other people.  If you choose a 7-10, you are a strong advocate.  the rest is neutral to negative.  For example, a 2 would be a detractor, they might recommend AGAINST it.
+* (JT:) I use this a lot and put it on slides for CEOs in the Fortune industry.  The most important thing is that your score improves over time, nto necessarily where it lands initially.  The key metric that is looked at.
+* NPS Score is a reference and consider how much we can improve in our product.  I wouldn't say this is bad, its a signal for us to continue improving. There's a lot of things we can do, like getting better customer or user experience in O3DE.
+* (Document reading continues to the feedback section)
+* We categorized general feedback into different groups - error handling, documentation, etc.
+* Large amount of feedback about error messages.  Lots of suggestions from the customers that we collected.
+* We also prepared a dashboard with issues on the github.
+* End of presentation.  
+* The impetus is to build more and more features that compare to other engines, but fundamentally there are usability problems we really need to solve to get users onboard easy and build basic functionality easily.
 
-### Topic: Include canonical repos in O3DE release process 
-* NickL: just as a technical example here, I did try to use the O3DE-extras as expected (add the URL) and it did not currently function
-  * Many things did not go right - the extras repos contain no gem urls, the gem.jsons contain no download URL, and the current repo code
-  cannot handle gems in subfolders instead of the root. Many technical Limitations means that if we do want to include the extras in a release
-  then they will have to literally be included in the release, ie, inside the release zip setup.exe and so on
-* byrcolin:  (Hard to capture the conversation exactly here, but talked about the original design for it being something where the repo.json
-  is an advertisement file that indicates where the other objects could be found, and doesn't have to be part of the repo at all, just anywhere 
-  you can put it so that it can be downloaded and advertise links.)
-* JT : talked about how blender's community addons were a high motivator for getting engaged in the community. 
-  One of the determining factors to making it canonical and how its done is to overtly set it up to get it into the canonical.
-  It was a high motivator for community engagement and could easily get lost in the conversation.
-* geds-dm - If you build an installer based on extras, it would have the binaries. 
-* JT:  Discussed at the UX meeting.  Danillo was working on this gem system project manger.  They talked about it this last meeting
-  Some of the things we talked about here, they worked thru.
-  Talk to Josh in the UX team.  It came out in their research that its a soft spot for the user.
-- Danillo - The gems in the core cannot rely on that repo, the user would have to download the gem seperately anwyay.
-- Colin - Correct, at minimum it would not need a zip file, it would just need a tag for the release.  Secondarily, a zip file made
-  of it could be a binary build.   It could be available by some means for the installer, plus link to that S3 bucket or whatever it is
-- Danillo a question would be whether the release would be blocked by canonical not being ready or whether it would leave the non-functioning
-  canonicals behind.
-- JT - The work I'm doing with the USD module camera, would be come core / canonical.
-- Byrcolin: core modules are either essential (used by everyone) or required by the core to function.  likely you should put a ticket to put
-  it into the repo.  Or convince the TSC that it goes in the core repo.  The core is small, changes rarely, hardened.  Extras changes rapidy.
-  Extras can have items promoted and demoted.
-- JT - Just again to reiterate that changes should have a mechanism to prohibit.  If you're going to touch somehting, touch it only once.  Make
-  sure you can make the adjustments later on.
-- NIck:  I'm imagining a universe
-- byrcolin - yes the official repos just have links to the extras repos, the repo link (extras) will be for all installs.
-- Theres also another list that lives only in the program manager, that has community links.  It can add it to the repo and you can see all the
-  objects in the repo, trust it, and get the content.
-- JT - this is something familiar with the studio, and heavily modified on the internal studios.  I don't want to paint anyone in the corner.
-  I'm prominent in the blender fork ecosystem for boutique studios.
-- byrcolin - I can maybe contribute 
-- JT - it tends to encourage code contribution
-- Nick: (Explained how the installer process creates pre-built binaries, including pre-built CMAKE files, headers, lib files, dlls, etc, that can be used
-without compiling but also allows you to link to source.  For example, you can have a source gem, built against a source engine, or a source gem built against
-a installer engine, or a built gem against a source engine, etc.  They are interchangeable transparently.
-- Nick: Asks JT:  how do they ensure in blender that all extras/plugins work?
-- JT:  The community is volunteer to maintain them and do some quick regression tests, etc.  Currently they're pushing it to the cloud infrastructure
- to maintian more control over it.  They're moving more towards a walled garden version of all this, to keep their management needs down.  Prone to
- relying on the community to do the minion work for the module manager.  there are so many modules that sometimes a second developer jumps in and helps.
- organically helped.  So its that organic building up of the community - so the earlier you start the more the community grows.
-- JT:  The thing I advocated for and wasn't implemented was to implement a feed back system.  It would suddenly break, slip thru the cracks of the community
-  testing mechanism.  Devs would have to rush to fix the addon, so there are dynamics there that have to be wrangled.  It is an opportunity for community engagement.
-- byrcolin: In such a scenario, say I have a plugin for the blender, I work it out and it works in the current version.  Does it get included in the next version 
-automatically, even if it fails?  
-- JT:  Yes, They rely on the people ad-hoc wise, managing this, and it slips htru the cracks.  But thats why I got involved in soft-fork ecosystem.  People like us
-can handle a lot of stuff at the time, we can lend our expertise.  The novices, if they're in charge of hte project, the project can go sideways.  It does really
-envigorate the community.
-- byrcolin:  We have a versioning system, I think geds-dm might know more.  I think it specifies whether or not the object is compatible with a release.  Current
-  release forward / unspecified.  we don't have the resources to build or test everyones things.  Unless the person issuing that gem, says no, its only for release X.
-- Nick L:  Can put more metadata on it, such as tested in this version, last known good version, etc.
-- JT: that's what we do in blender, it says what version its tested against.  when you come up in the addon manager it shows that info.  It makes it obvious which ones
-need community testing or upgrading.  That metadata was put in for that reason, having that clear and in the right places allows us to jump in.
-- geds-dm:  its being added now.
-(Semi-consensus here that the future vision is, a lightweight core and installer, but with already prepopulated repo urls to the canonical repos but not the bulk
-data of those repos.  This would allow the project manager to show the various gems available in taht repos, with UX to indicate that they are downloadable/extra
-and autodownload if used).
+Dashboard links: 
+* https://github.com/orgs/o3de/projects/42 - Rev The Engine (RTE) Dashboard
+* https://github.com/o3de/o3de/projects/15 - Walk The Engine (WTE) Dashboard
+
+### Topic:  open discussion
+* Joshua Rainbolt:  PArt of the reason the TSC needs to be involved in this is we need to be able to start assigning things to individual sigs and resolve them as problems.  How we take it on and when we take it on is going to need TSCs help to assign and divide this work.
+* Royal:  Q for UX team.  did you include the complexity of material for these workflows?  something that is a simple square that you connect to a square that you put into another square, vs something that you import from blender with tons of shapes?
+* Yuyi:  Survey result came from everyone in the community.  We asked them what they feel so far in terms of UX.
+* Yuyi:  In addition to that, we did a Walk The Engine where a customer is invited in to perform some task, and we asked users to bring their assets with lots of complexity in the model.  We interviewed a game developer from New World for example, they brought their building hut in, with lots of really complicated process and gave us feedback for the survey.
+* Royal:  Normally people would be using blender, maya, 3ds, I gave Sandeep one recently that was built in blender and it brought it to its knees.  it wasn't that the geom was complex, but the sheer volume of little things like LODs that were in the way and cluttered.  I asked about complexity - if I throw something like a chair, its easy, if I do something greater, its a very different experience.
+* Yuyi: I think those are considered in the survey results.  They may be using this feature in a simpler use case, or complex and struggling.  for those feedback we should record those in the rev-the-engine dashboard so that the UX team can look at them.
+* JT: (explains that in things like blender, users who regularly do a workflow find workarounds reasonably quickly and find a way to do efficient work around the deficiencies and problems).
+* Royal:  O3de brought in like, 100 sub-meshes, were put together in the prefab.  There was a ton of extra things that really made it difficult
+* Yuyi: Think of this as all the customer feedback.  The feedback here indicates that the customer already managed to actually get into the engine and enjoyed their experience.  We didn't record users who dropped out and could not make it into O3DE in the first place.
+* Royal:  Why not?  why not note that they fell out at a specific point.
+* Yuyi: We didn't record this in the survey - we invite 75 customers to run the WTE.  None of them are O3DE users - from game dev/user panel, all have used Unreal or Unity.  They went thru the process and the onboarding experience were not good and most of them fell out and didn't participate.  There is that.  There is hard to continue with the rest of the workflow because of the onboarding experience.
+* royal: can we do the basic stuff first, like the stuff you'd be in unity or unreal, and the steps to open those objects and get them running?  But if we have people dropping out before they can do that the rest is irrelevant.
+* Joshua:  that's a good point, royal.  There is a workflow 1 that focuses on onboarding.  We can always walk you through the footage of that.  This is more holistic end-to-end.
+* Royal:  Before worrying about a passing grade of everything else, get an A on your basics.  Don't boil the ocean.
+* Yuyi: I would say, if we look at this 9 workflows, onboarding and game-play would be the most important ones.   If we want to extend to animation systems and world building, thats four of them.  This includes how to bring the assets in, how to manipulate it, set it up as a basic way.
+* Royal:  bringing assets in, there's a misconception that theres no assets but you can bring in anything from Unreal, Unity, packages in.  and some of the different nuances, blender, unreal, etc.  You can use many objects from the unreal store.
+* JT : Keep in mind in the game industry, 2 users.  one is tinkering on their own they drop out cuz they have a certain on the time.  Someone could be payed to do an engine evaluation - the tinker is more likely to bounce.  Someone who's been tasked with engine eval will spend more time.  Put aside 1-2 weeks full time to eval.  Keep that in mind.
+* Royal:  Lots of people in the industry will play with the engine then later shoot it down before it even gets a fair eval.
+* JT: Happened to blender.   When the major smoke plugin studio suddenly raised the maya price to really expensive. 
+* Yuyi: We need a working group!  We need a collaboration between sigs.  Its hard for us to approach to each sig, it would be great to have a group of people to improve the UX.  
+* Royal:  Working group and TSC meeting.  you can get a bunch of people from the community that would contribute.  You can build a single repo that they can simply have a project they are working on thats all about elevating this.  A working group exists for as long as is necessary.  You can fire the working group up, you can keep it going and then shut it down when its done.  You put a charter together that want to do this.  Propose it to the TSC, get feedback we will ratify it.
+* JT: We use them extensively in ASWF.  I can help walk you through it.
+* Colinb:  the output of your working group should be the creation of issues.
+* NickL/Royal:  working groups can also work on code.
+* Colinb:  Sigs or working group doing this?
+* Royal/Yuyi:  The working group.
+* JT:  once it kicks off like it does in ASWF they become very popular.  Bunch of people get in and see results it works out well.
+
+
+### Call for ADHOC agenda items
+* Royal: opening a thing about tagging and flagging on groups.io.  the means for us to expand our communications model.  Ltos of discussions in discord gets lost, this can with one command push to the groups and keep its history.
