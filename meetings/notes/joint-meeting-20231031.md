@@ -17,7 +17,8 @@
 * Alex P [Amazon]
 
 ## Overall outline
-This meeting has been recorded.  Please reachout to Naomiwash for link
+This meeting has been recorded.  
+link: https://drive.google.com/file/d/1LnAy_fuB7W0a2OD9gE14MT8HRhjoUBPn/view
 
 ### Agenda Topics
 
