@@ -1,6 +1,10 @@
 # TSC Meeting - 6/7/2026
 
 ## Chair and Co-Chair
+* Nick_L
+* (Co-Chair pending)
+
+## Attendees (By Discord name)
 * Cheddarspice [Iamjbq]
 * ChristianHinkle
 * colinb[apmg]
@@ -14,10 +18,6 @@
 * Yaakuro
 * Shauna [Genome Studios]
 * Steve P [Amazon]
-* (Co-Chair pending)
-
-## Attendees (By Discord name)
-* Nick_L
 
 ### Announcements - JT - I'll help out with the translation packs
 * I've already started the Qt thread, and I started a thread in sig-content.
